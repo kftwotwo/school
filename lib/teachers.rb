@@ -11,4 +11,8 @@ class Teacher
   def add
     @@teachers.push(self)
   end
+
+  define_singleton_method(:clear) do
+    @@teachers = []
+  end
 end

@@ -18,6 +18,14 @@ describe(Teacher) do
     it "will add teacher to array @@teachers" do
       teacher = Teacher.new({:name => "John"})
       expect(teacher.add()).to(eq([teacher]))
+    end
   end
+
+  describe('.clear') do
+    it "will remove all teachers" do
+      teacher = Teacher.new({:name => "John"})
+      teacher.add()
+      expect(Teacher.clear()).to(eq([]))
+    end
   end
 end
