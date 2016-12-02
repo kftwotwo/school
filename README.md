@@ -1,6 +1,4 @@
 Students
-  .all
-  .clear
   .find
 
 Courses

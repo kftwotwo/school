@@ -1,5 +1,6 @@
 class Student
   attr_reader(:name, :id)
+
   @@students = []
 
   def initialize(attributes)
@@ -17,5 +18,15 @@ class Student
 
   define_singleton_method(:clear) do
     @@students = []
+  end
+
+  define_singleton_method(:find) do |id|
+    found = nil
+    @@students.each do |student|
+      if student.id() == id
+        found = student
+      end
+    end
+    found
   end
 end

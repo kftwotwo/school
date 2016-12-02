@@ -33,4 +33,14 @@ describe(Student) do
       expect(Student.all()).to(eq([student, student2]))
     end
   end
+
+  describe(".find") do
+    it "will student by id" do
+      student = Student.new(:name => "Duane")
+      student.add()
+      student2 = Student.new(:name => "Steve")
+      student2.add()
+      expect(Student.find(1)).to(eq(student))
+    end
+  end
 end
