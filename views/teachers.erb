@@ -1,0 +1,7 @@
+<h1>Here are all your teachers</h1>
+
+<ul>
+  <% @teachers.each() do |teacher| %>
+    <li><a href="/teachers/<%= teacher.id() %>"><%= teacher.name() %></a></li>
+  <% end %>
+</ul>
