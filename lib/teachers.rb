@@ -29,5 +29,4 @@ class Teacher
      end
      found
   end
-
 end
