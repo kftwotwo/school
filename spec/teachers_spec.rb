@@ -13,4 +13,11 @@ describe(Teacher) do
       expect(teacher.id()).to(eq(1))
     end
   end
+
+  describe('#add') do
+    it "will add teacher to array @@teachers" do
+      teacher = Teacher.new({:name => "John"})
+      expect(teacher.add()).to(eq([teacher]))
+  end
+  end
 end

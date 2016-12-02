@@ -1,10 +1,8 @@
 Teachers
-  #initialize
-  #name
-  .all
+  #initialize*
   #save
+  .all
   .clear
-  #id
   .find
 
 Students

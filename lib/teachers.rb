@@ -7,4 +7,8 @@ class Teacher
     @name = attributes[:name]
     @id = @@teachers.length + 1
   end
+
+  def add
+    @@teachers.push(self)
+  end
 end
