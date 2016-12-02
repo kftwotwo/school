@@ -15,4 +15,9 @@ class Teacher
   define_singleton_method(:clear) do
     @@teachers = []
   end
+
+  define_singleton_method(:all) do
+    @@teachers
+  end
+
 end

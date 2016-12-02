@@ -2,6 +2,10 @@ require('rspec')
 require('./lib/teachers')
 
 describe(Teacher) do
+  before :each do
+    Teacher.clear
+  end
+
   describe('#initialize') do
     it "will return name" do
       teacher = Teacher.new({:name => "John"})
@@ -26,6 +30,16 @@ describe(Teacher) do
       teacher = Teacher.new({:name => "John"})
       teacher.add()
       expect(Teacher.clear()).to(eq([]))
+    end
+  end
+
+  describe('.all') do
+    it "will show all teachers" do
+      teacher = Teacher.new({:name => "John"})
+      teacher.add()
+      teacher2 = Teacher.new({:name => "Kevin"})
+      teacher2.add()
+      expect(Teacher.all()).to(eq([teacher, teacher2]))
     end
   end
 end
