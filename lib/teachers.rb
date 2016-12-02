@@ -13,6 +13,10 @@ class Teacher
     @@teachers.push(self)
   end
 
+  def add_student(student)
+    @students.push(student)
+  end
+
   define_singleton_method(:clear) do
     @@teachers = []
   end

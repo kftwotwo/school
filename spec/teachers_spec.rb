@@ -30,6 +30,14 @@ describe(Teacher) do
     end
   end
 
+  describe('#add_student') do
+    it "will add student to array @students" do
+      teacher = Teacher.new({:name => "John"})
+      student = Student.new(:student => "jr. Kevin")
+      expect(teacher.add_student(student)).to(eq([student]))
+    end
+  end
+
   describe('.clear') do
     it "will remove all teachers" do
       teacher = Teacher.new({:name => "John"})
