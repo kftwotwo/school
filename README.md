@@ -1,6 +1,3 @@
-Students
-  .find
-
 Courses
   #initialize
   .clear

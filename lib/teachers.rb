@@ -1,11 +1,12 @@
 class Teacher
-  attr_reader(:name, :id)
+  attr_reader(:name, :id, :students)
 
   @@teachers = []
 
   def initialize(attributes)
     @name = attributes[:name]
     @id = @@teachers.length + 1
+    @students = []
   end
 
   def add

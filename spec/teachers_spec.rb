@@ -16,6 +16,11 @@ describe(Teacher) do
       teacher = Teacher.new({:name => "John"})
       expect(teacher.id()).to(eq(1))
     end
+
+    it "will be empty students array" do
+      teacher = Teacher.new({:name => "John"})
+      expect(teacher.students()).to be_an(Array)
+    end
   end
 
   describe('#add') do
