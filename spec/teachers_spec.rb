@@ -42,4 +42,14 @@ describe(Teacher) do
       expect(Teacher.all()).to(eq([teacher, teacher2]))
     end
   end
+
+  describe('.find') do
+    it "find teacher by id" do
+      teacher = Teacher.new({:name => "John"})
+      teacher.add()
+      teacher2 = Teacher.new({:name => "Kevin"})
+      teacher2.add()
+      expect(Teacher.find(2)).to(eq(teacher2))
+    end
+  end
 end

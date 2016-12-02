@@ -20,4 +20,14 @@ class Teacher
     @@teachers
   end
 
+  define_singleton_method(:find) do |id|
+    found = nil
+     @@teachers.each do |teacher|
+       if teacher.id() == id
+         found = teacher
+       end
+     end
+     found
+  end
+
 end
