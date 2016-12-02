@@ -1,6 +1,4 @@
 Students
-  #initialize
-  #save
   .all
   .clear
   .find

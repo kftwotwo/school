@@ -2,6 +2,10 @@ require('rspec')
 require('./lib/students')
 
 describe(Student) do
+
+  before :each do
+    Student.clear()
+  end
   describe("#initialize") do
     it "will return name" do
       student = Student.new(:name => "Steve")
@@ -17,6 +21,16 @@ describe(Student) do
     it "will add student to array" do
       student = Student.new(:name => "Steve")
       expect(student.add()).to(eq([student]))
+    end
+  end
+
+  describe(".all") do
+    it "will show all students" do
+      student = Student.new(:name => "Duane")
+      student.add()
+      student2 = Student.new(:name => "Steve")
+      student2.add()
+      expect(Student.all()).to(eq([student, student2]))
     end
   end
 end

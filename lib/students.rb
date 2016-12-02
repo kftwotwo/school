@@ -10,4 +10,12 @@ class Student
   def add
     @@students.push(self)
   end
+
+  define_singleton_method(:all) do
+    @@students
+  end
+
+  define_singleton_method(:clear) do
+    @@students = []
+  end
 end
