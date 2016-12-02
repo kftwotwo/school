@@ -1,17 +1,8 @@
-Teachers
-  #initialize*
-  #save
-  .all
-  .clear
-  .find
-
 Students
   #initialize
-  #name
-  .all
   #save
+  .all
   .clear
-  #id
   .find
 
 Courses

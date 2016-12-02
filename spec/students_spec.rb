@@ -12,4 +12,11 @@ describe(Student) do
       expect(student.id()).to(eq(1))
     end
   end
+
+  describe("#add") do
+    it "will add student to array" do
+      student = Student.new(:name => "Steve")
+      expect(student.add()).to(eq([student]))
+    end
+  end
 end
