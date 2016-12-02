@@ -1,9 +1,3 @@
-Courses
-  #initialize
-  .clear
-  .all
-  #save
-  .find
 
 /
 /teachers
@@ -30,5 +24,8 @@ Courses
 /schools/:id/teachers
 /schools/:id/courses
 /schools/:id/students
-
 /success
+
+teachers.erb
+new_teachers.erb
+teacher.erb
